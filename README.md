@@ -1,5 +1,4 @@
-# Data Structures
-## Project 1
+# Data Structures - Project 1
 ## Due 9/27/15 at 11:59 pm
 
 Your task will be to determine if an input string is has the same letters when read forwards as it does backwards.
