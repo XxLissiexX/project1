@@ -6,7 +6,7 @@ Your task will be to determine if an input string is has the same letters when r
 
 For example: The word 'anna' has the same letters regardless of which end you start from.
 
-For the purpose of this project we will ignore any non-alphanumeric characters (space, punctuation, non-printable characters)
+For the purpose of this project we will ignore any non-alphanumeric characters (space, punctuation, non-printable characters).
 
 We will also practice using recursion so be sure to use it where directed.
 
@@ -16,10 +16,10 @@ I will supply you with these files:
 
  * README.md - This file contains these instructions
  * makefile - use 'make' on the linux system to compile the project using this makefile.  The binary file will be named 'palindrome.out'.
- * test_palindromes.cpp - This file contains all of the test cases and will be what you must compile and run to tes your code
- * Palindrome.hpp - This contains the header file for your Palindrome object
+ * test_palindromes.cpp - This file contains all of the test cases and will be what you must compile and run to test your code.
+ * Palindrome.hpp - This contains the header file for a Palindrome object. You must implement this object in order for the test cases to pass.
 
-## You must write complete the Palindrome.cpp file that implements the test_string function found in the Palindrome.hpp file.
+You must write the Palindrome.cpp file that implements the test_string function found in the Palindrome.hpp file.
 
 ## General Flow of the test_string function
 
