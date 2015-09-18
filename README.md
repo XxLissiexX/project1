@@ -23,17 +23,17 @@ You must write the Palindrome.cpp file that implements the test_string function 
 
 ## General Flow of the test_string function
 
- * Create a stack and a Queue to use 
+ * Create a stack and a queue to use 
  * Using recursion, add each alphanumeric character to both a stack and a queue.
- * Using recursion, pop a character from the stack and dequeue a character from the queue
-   * If the characters are not equal
-     * Destroy the stack and queue appropriately 
+ * Using recursion, pop a character from the stack and dequeue a character from the queue.
+   * If the characters are not equal -
+     * Destroy the stack and queue appropriately. 
        (this can be handled by the compiler if you wish, just make sure not to have memory leaks)
      * Return the number of correct matches before the mismatch occurred. 
-  * If they are equal, increment a counter of correct matches.
+  * If they are equal, increment a counter for the correct number of matches.
 
- * When both the stack and queue are empty  
-   * return -1 to indicate it is a palindrome
+ * When both the stack and queue are empty -
+   * return -1 to indicate it is a palindrome.
 
 ## General Instructions
 
@@ -45,15 +45,15 @@ You must write the Palindrome.cpp file that implements the test_string function 
  
 ## Hints
 
- * A string may be indexed like an array to get individual characters. my_string[0] will give the first character of the string 'my_string'
+ * A string may be indexed like an array to get individual characters. my_string[0] will give the first character of the string 'my_string'.
  * If all the tests pass, you SHOULD be fairly close to 100% assuming you follow the implementation instructions, be sure to follow them all.
 
 ## Rubric
 
- * Your program must compile and run on our knuth linux server. We will go over how to test this in class.
+ * [30%] Your program must compile and run on our knuth linux server. We will go over how to test this in class. 
 
- * Your program must pass all test cases
+ * [50%] Your program must pass all test cases
 
- * You must document all functions in your code (you don't need to go crazy, just document what you are doing)
+ * [10%] You must document all functions in your code (you don't need to go crazy, just document what you are doing)
 
- * You must properly handle memory, memory leaks will cost you points
+ * [10%] You must properly handle memory, memory leaks will cost you points
