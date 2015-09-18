@@ -1,8 +1,23 @@
-#include <cstdlib>
+#include <algorithm>
 #include <cassert>
+#include <cstdlib>
 #include <iostream>
 
 #include "Palindrome.hpp"
+#define rand_range (5 + rand() % 11)
+
+inline char randChar() { return 'a' + (rand() % ('z' - 'a')); }
+
+std::string randPalindrome(const int len, const int& correct) {
+  std::string front = "", back = "";
+  for (int i = 0; i < len >> 1; ++i) {
+    const char s = randChar();
+    front += s;
+    back += i == correct ? ((s + 1 - 'a') % 26) + 'a' : s;
+  }
+  std::reverse(back.begin(), back.end());
+  return front + back;
+}
 
 int main()
 {
@@ -32,6 +47,10 @@ int main()
 
   // test 4: random palindromes so you cannot hard code them
   
+  for (int i = 0, len = rand_range, current = (rand() % (len / 2)) - 1; i < rand_range; ++i, len = rand_range, current = (rand() % len) - 1)
+    assert(p->test_string(randPalindrome(len, current)) == current);
+  std::cout << "Test 4 passed." << std::endl;
+
   // test 5: returning the correct position of the failed palidromes
   assert(p->test_string("ab") == 0);
   assert(p->test_string("abca") == 1);
@@ -39,4 +58,7 @@ int main()
   assert(p->test_string("rm -rf /") == 0);
   assert(p->test_string("a,,b,,c,,d,,b,,a") == 2);
   std::cout << "Test 5 passed." << std::endl;
+
+  // cleanup
+  delete p;
 }
