@@ -45,19 +45,22 @@ int main()
   assert(p->test_string("Bob: Did Anna peep? Anna: Did Bob?") == -1);
   std::cout << "Test 3 passed." << std::endl;
 
-  // test 4: random palindromes so you cannot hard code them
-  
-  for (int i = 0, len = rand_range, current = (rand() % (len / 2)) - 1; i < rand_range; ++i, len = rand_range, current = (rand() % (len / 2)) - 1)
-    assert(p->test_string(randPalindrome(len, current)) == current);
-  std::cout << "Test 4 passed." << std::endl;
-
-  // test 5: returning the correct position of the failed palidromes
+  // test 4: returning the correct position of the failed palindromes
   assert(p->test_string("ab") == 0);
   assert(p->test_string("abca") == 1);
   assert(p->test_string("A man, a plan, a canal, Panema!") == 2);
   assert(p->test_string("rm -rf /") == 0);
   assert(p->test_string("a,,b,,c,,d,,b,,a") == 2);
+  std::cout << "Test 4 passed." << std::endl;
+
+  // test 5: random palindromes so you cannot hard code them
+  
+  for (int i = 0, len = rand_range, current = (rand() % (len / 2)) - 1; i < rand_range; ++i, len = rand_range, current = (rand() % (len / 2)) - 1)
+    assert(p->test_string(randPalindrome(len, current)) == current);
   std::cout << "Test 5 passed." << std::endl;
+
+  std::cout << "\nAll Tests Passed!" << std::endl;
+
 
   // cleanup
   delete p;
